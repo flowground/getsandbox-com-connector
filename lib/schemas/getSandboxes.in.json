@@ -1,0 +1,9 @@
+{
+    "type": "object",
+    "properties": {
+        "filterType": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

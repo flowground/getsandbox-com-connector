@@ -1,0 +1,191 @@
+{
+    "title": "Sandbox",
+    "description": "Sandbox API",
+    "docsUrl": "https://getsandbox.com/docs/api/overview",
+    "url": "https://api.apis.guru/v2/specs/getsandbox.com/v1/swagger.json",
+    "envVars": {},
+    "credentials": {
+        "fields": {
+            "server": {
+                "label": "Server",
+                "viewClass": "SelectView",
+                "model": [
+                    "https://getsandbox.com/api/",
+                    "--- Custom URL"
+                ],
+                "required": true
+            },
+            "otherServer": {
+                "label": "Custom Server URL",
+                "viewClass": "TextFieldView"
+            },
+            "api_key": {
+                "label": "API_Key (api_key)",
+                "viewClass": "TextFieldView"
+            }
+        }
+    },
+    "triggers": {
+        "startFlow": {
+            "main": "./lib/triggers/startFlow.js",
+            "type": "polling",
+            "title": "Start Flow",
+            "fields": {}
+        }
+    },
+    "actions": {
+        "getSandboxesActivity": {
+            "main": "./lib/actions/getSandboxesActivity.js",
+            "title": "searchActivity",
+            "description": "",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getSandboxesActivity.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getSandboxes": {
+            "main": "./lib/actions/getSandboxes.js",
+            "title": "getSandboxes",
+            "description": "",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getSandboxes.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "createSandbox": {
+            "main": "./lib/actions/createSandbox.js",
+            "title": "createSandbox",
+            "description": "",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/createSandbox.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "deleteSandbox": {
+            "main": "./lib/actions/deleteSandbox.js",
+            "title": "deleteSandbox",
+            "description": "",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/deleteSandbox.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getSandbox": {
+            "main": "./lib/actions/getSandbox.js",
+            "title": "getSandbox",
+            "description": "",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getSandbox.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "updateSandbox": {
+            "main": "./lib/actions/updateSandbox.js",
+            "title": "updateSandbox",
+            "description": "",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/updateSandbox.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "forkSandbox": {
+            "main": "./lib/actions/forkSandbox.js",
+            "title": "forkSandbox",
+            "description": "",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/forkSandbox.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "deleteSandboxState": {
+            "main": "./lib/actions/deleteSandboxState.js",
+            "title": "deleteSandboxState",
+            "description": "",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/deleteSandboxState.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getSandboxState": {
+            "main": "./lib/actions/getSandboxState.js",
+            "title": "getSandboxState",
+            "description": "",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getSandboxState.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        }
+    }
+}

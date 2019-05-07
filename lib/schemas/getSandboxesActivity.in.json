@@ -1,0 +1,27 @@
+{
+    "type": "object",
+    "properties": {
+        "fromTimestamp": {
+            "required": false,
+            "type": "integer",
+            "format": "int64"
+        },
+        "sourceSandboxes": {
+            "required": false,
+            "type": "string"
+        },
+        "keyword": {
+            "required": false,
+            "type": "string"
+        },
+        "allTypes": {
+            "required": false,
+            "type": "boolean"
+        },
+        "maxResults": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        }
+    }
+}

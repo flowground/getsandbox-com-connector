@@ -1,0 +1,46 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "properties": {
+                "commitBaseTemplate": {
+                    "default": false,
+                    "description": "Whether to commit the example Sandbox definition upon creation.",
+                    "type": "boolean"
+                },
+                "description": {
+                    "description": "Text describing this Sandbox.",
+                    "maxLength": 255,
+                    "minLength": 0,
+                    "pattern": "^[A-Za-z-_ 0-9]*$",
+                    "type": "string"
+                },
+                "name": {
+                    "description": "Optional name to give the Sandbox, will be generated if omitted.",
+                    "pattern": "^[A-Za-z-_ 0-9]*$",
+                    "type": "string"
+                },
+                "ownerOrganisationName": {
+                    "description": "Name of the team this Sandbox should be created under.",
+                    "maxLength": 36,
+                    "minLength": 2,
+                    "pattern": "^[a-zA-Z-_0-9]*$",
+                    "type": "string"
+                },
+                "parentSandboxName": {
+                    "description": "Name of the Sandbox this should be created under, if exists will be a 'clone'.",
+                    "pattern": "^[A-Za-z-_ 0-9]*$",
+                    "type": "string"
+                },
+                "transportType": {
+                    "enum": [
+                        "HTTP",
+                        "JMS"
+                    ],
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        }
+    }
+}
